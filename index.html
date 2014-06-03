@@ -7,188 +7,73 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
 	<title>A Voce Behind the Lens</title>
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+  <link href="js/jquery.bxslider.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/bkgnd_animation.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/photoslide.css" type="text/css" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 	<!-- <link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen"> -->
 	<!--[if IE]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
 </head>
- <!---Slider styling -->
 
-  <style>
-    body {
-      -webkit-font-smoothing: antialiased;
-      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #232525;
-      padding-top:70px;
-    }
-
-    #slides {
-      display: none;
-      position: relative;
-    }
-
-    #slides .slidesjs-navigation {
-      margin-top:5px;
-    }
-
-    .slidesjs-navigation {
-      z-index: 90;
-    }
-
-    a.slidesjs-next,
-    a.slidesjs-previous,
-    a.slidesjs-play,
-    a.slidesjs-stop {
-      background-image: url(images/btns-next-prev.png);
-      background-repeat: no-repeat;
-      opacity: 0.3;
-      display:block;
-      width:12px;
-      height:18px;
-      overflow: hidden;
-      text-indent: -9999px;
-      margin-right:5px;
-      float:left;
-    }
-
-    a.slidesjs-next {
-      margin-right: 10px;
-      background-position: -12px 0;
-      position: absolute;
-      top: 50%;  /*adjust this between 45 to 50 based on the size of your arrow to get the "vertically middle" position */
-      right: .5%;
-
-    }
-
-    a:hover.slidesjs-next {
-      background-position: -12px -18px;
-      opacity: 1;
-    }
-
-    a.slidesjs-previous {
-      background-position: 0 0;
-      position: absolute;
-      top: 50%;  /*adjust this between 45 to 50 based on the size of your arrow to get the "vertically middle" position */
-      left: 0.9%;
-
-    }
-
-    a:hover.slidesjs-previous {
-      background-position: 0 -18px;
-      opacity: 1;
-    }
-
-    a.slidesjs-play {
-      width:15px;
-      background-position: -25px 0;
-    }
-
-    a:hover.slidesjs-play {
-      background-position: -25px -18px;
-       opacity: 1;
-    }
-
-    a.slidesjs-stop {
-      width:18px;
-      background-position: -41px 0;
-      opacity: 1;
-    }
-
-    a:hover.slidesjs-stop {
-      background-position: -41px -18px;
-      opacity: 1;
-    }
-
-    .slidesjs-pagination {
-      margin: 7px 0 0;
-      width: 100px;
-      margin-left: auto;
-      margin-right: auto;
-      list-style: none;
-    }
-
-    .slidesjs-pagination li {
-      float: left;
-      margin: 0 3px;
-    }
-
-    .slidesjs-pagination li a {
-      display: block;
-      width: 13px;
-      height: 0;
-      padding-top: 13px;
-      background-image: url(images/pagination.png);
-      background-position: 0 0;
-      overflow: hidden;
-    }
-
-    .slidesjs-pagination li a.active,
-    .slidesjs-pagination li a:hover.active {
-      background-position: 0 -13px
-    }
-
-    .slidesjs-pagination li a:hover {
-      background-position: 0 -26px
-    }
-
-    #slides a:link,
-    #slides a:visited {
-      color: #333
-    }
-
-    #slides a:hover,
-    #slides a:active {
-      color: #9e2020
-    }
-
-    .navbar {
-      overflow: hidden
-    }
-  </style>
-
-  <body>
+<body>
 
 <!--Menu-->
 	<div class="menu">
 		<div class="container0 clearfix">
-			<div id="logo" class="grid_2">
-			</div>
-			<img src="images/logo.png" alt="A Voce Behind the Lens" class="logo_img">
-			<div id="nav" class="grid_10 omega">
+      <div id="logo" class="grid_12">
+        <img src="images/logo.png" alt="A Voce Behind the Lens" class="logo_img">
+      </div>
+      <div id="menu-title">
+        <h1>Photography by Jennifer Voce</h1>
+      </div>  
+<!--Menu/Navigation for Slides-->
+			<div id="nav" class="grid_12">
 				<ul class="navigation">
-          <!-- <li class="menu_title">Photography by Jennifer Voce</li> -->
 					<li data-slide="1" class="font_white slidelink">HOME</li>
 					<li data-slide="2" class="font_green slidelink">ABOUT ME</li>
 					<li data-slide="3" class="font_blue slidelink">PORTFOLIO</li>
 					<li data-slide="4" class="font_red slidelink">TESTIMONIALS</li>
           <li data-slide="5" class="font_yellow slidelink">CONTACT</li>
         </ul>
-			<div>
-        <ul id="icon_header">
-          <li class="icons1"><a href="http://avocebehindthelens.wordpress.com/" target="_new" title="A VoceBehindtheLens Blog"></a></li>
-          <li class="icons2"><a href="https://www.facebook.com/aVocebehindtheLens" target="_new" title="A VoceBehindtheLens on Facebook"></a></li>
-          <li class="icons3"><a href="http://www.flickr.com/photos/53021025@N04/" target="_new" title="A VoceBehindtheLens on Flickr"></a></li>
-				</ul>
-      </div><!-- icon_header -->
+
+<!--Menu/Navigation for External Links-->        
+        <!--<ul>  
+          <li class="font_red slidelink"><a href="http://avocebehindthelens.wordpress.com/" target="_new" title="A VoceBehindtheLens Blog">WORDPRESS</a></li>
+          <li class="font_blue slidelink"><a href="https://www.facebook.com/aVocebehindtheLens" target="_new" title="A VoceBehindtheLens on Facebook">FACEBOOK</a></li>
+          <li class="font_yellow slidelink"><a href="http://www.flickr.com/photos/53021025@N04/" target="_new" title="A VoceBehindtheLens on Flickr">FLICKR</a></li>
+        </ul> -->
+			<!--<div><ul id="icon_header"></ul></div>-->
+
       </div><!-- nav -->
 		</div><!-- container0 -->
 	</div><!-- menu -->
 
 <!--Slide 1 Photos-->
-	<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+	<div class="slide cb-slideshow grid_12" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
 		<div class="container0 clearfix">
-    		<div id="slides" class="grid_12">
-		      <img src="images/1.jpg" alt="Photo by: Jennifer Voce">			      
-		      <img src="images/2.jpg" alt="Photo by: Jennifer Voce">
-		      <img src="images/3.jpg" alt="Photo by: Jennifer Voce">
-		      <img src="images/4.jpg" alt="Photo by: Jennifer Voce">
-		      <img src="images/5.jpg" alt="Photo by: Jennifer Voce">
-    		</div>
+      <ul>
+            <li><span>Image 01</span></li>
+            <li><span>Image 02</span></li>
+            <li><span>Image 03</span></li>
+            <li><span>Image 04</span></li>
+            <li><span>Image 05</span></li>
+            <li><span>Image 06</span></li>
+      </ul>
+      <!--Menu/Logo-->      
+      
+    		<!--<div class="grid_12">
+   
+
+          <!--<ul class="bxslider">
+            <li><img src="images/1.jpg" /></li>
+            <li><img src="images/2.jpg" /></li>
+            <li><img src="images/3.jpg" /></li>
+            <li><img src="images/4.jpg" /></li>
+          </ul>
+    		</div> -->
   		</div>
 	</div>
 
@@ -344,8 +229,9 @@
         </div>
       </div>
     </div>
-
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery1.11.1.js"></script>
+  <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
 	<script type="text/javascript" src="js/waypoints.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
@@ -354,32 +240,7 @@
   <script src="js/jquery.slides.min.js"></script>
   <!-- End SlidesJS Required -->
 
-  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
-  <script>
-    $(function() {
-      $('#slides').slidesjs({
-        width: 1200,
-        height: 650,
-        navigation: {
-          effect: "fade"
-        },
-        pagination: {
-          effect: "fade"
-        },
-        effect: {
-          fade: {
-            speed: 400
-          }
-        },
-        play: {
-          active: true,
-          auto: true,
-          interval: 8000,
-          swap: false,
-        }
-      });
-    });
-  </script>
-  <!-- End SlidesJS Required -->
+
+  
 </body>
 </html>
